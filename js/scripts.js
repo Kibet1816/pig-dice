@@ -11,3 +11,13 @@ function Player(rolled,currentScore,totalScore){
 var rolledDice=function(){
   return Math.floor(Math.random()*6)+1;
 }
+//Check for 1
+Player.prototype.checkForOne=function(){
+  this.rolled=rolledDice();
+  if (rolledDice()===1) {
+    this.currentScore=0;
+    alert("Oops!!You rolled a 1!!Your turn is over");
+  } else {
+    this.currentScore=+rolledDice();
+  }
+}
