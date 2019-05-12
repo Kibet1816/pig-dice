@@ -1,9 +1,20 @@
 div.dice{
   float: left;
   width: 32px;
-  background: #f5f5f5;
+  background: blue;
   padding: 10px;
   font-size: 24px;
   text-align: center;
   margin: 5px;
+}
+.col-md-6{
+  margin-top: 50px;
+  display: inline-block;
+  margin-left: 200px;
+}
+body{
+  background-image: url('../css/pig.png');
+}
+.fieldset{
+  background-color: white;
 }
