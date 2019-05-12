@@ -33,3 +33,8 @@ Player.prototype.winner=function(){
     alert("Winner!!!!!");
   }
 }
+
+//User interface logic
+$(document).ready(function(event){
+  
+});
