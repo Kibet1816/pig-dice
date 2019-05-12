@@ -43,4 +43,11 @@ $(document).ready(function(event){
    firstPlayer.checkForOne();
    $('#status-die1').text(firstPlayer.currentScore)
  });
+ $('button#diceRoll2').click(function(){
+   secondPlayer=new Player
+   secondPlayer.rolled=rolledDice();
+   $('#die2 .dice').text(secondPlayer.rolled);
+   secondPlayer.checkForOne();
+   $('#status-die2').text(secondPlayer.currentScore)
+ });
 });
