@@ -36,5 +36,11 @@ Player.prototype.winner=function(){
 
 //User interface logic
 $(document).ready(function(event){
-  
+  $('button#diceRoll1').click(function(){
+   firstPlayer=new Player
+   firstPlayer.rolled=rolledDice();
+   $('#die1 .dice').text(firstPlayer.rolled);
+   firstPlayer.checkForOne();
+   $('#status-die1').text(firstPlayer.currentScore)
+ });
 });
