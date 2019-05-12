@@ -21,3 +21,9 @@ Player.prototype.checkForOne=function(){
     this.currentScore=+rolledDice();
   }
 }
+//Check for hold
+Player.prototype.holdScore=function(){
+  this.toalScore+=this.currentScore;
+  this.currentScore=0;
+  alert("Your turn is over!");
+}
