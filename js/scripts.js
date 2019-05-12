@@ -36,18 +36,24 @@ Player.prototype.winner=function(){
 
 //User interface logic
 $(document).ready(function(event){
-  $('button#diceRoll1').click(function(){
+  $('button#dice-roll-1').click(function(){
    firstPlayer=new Player
    firstPlayer.rolled=rolledDice();
    $('#die1 .dice').text(firstPlayer.rolled);
    firstPlayer.checkForOne();
    $('#status-die1').text(firstPlayer.currentScore)
  });
- $('button#diceRoll2').click(function(){
+  $('button#dice-roll-2').click(function(){
    secondPlayer=new Player
    secondPlayer.rolled=rolledDice();
    $('#die2 .dice').text(secondPlayer.rolled);
    secondPlayer.checkForOne();
    $('#status-die2').text(secondPlayer.currentScore)
  });
+ $('button#dice-hold-1').click(function(){
+   $('#die1 .dice').text("Your final result is "+firstPlayer.currentScore)
+ });
+ $('button#dice-hold-2').click(function(){
+    $('#die1 .dice').text("Your final result is "+firstPlayer.currentScore)
+  });
 });
