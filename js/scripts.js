@@ -19,11 +19,12 @@ Player.prototype.checkForOne=function(){
     alert("Oops!!You rolled a 1!!Your turn is over");
   } else {
     this.currentScore=+rolledDice();
+    this.totalScore=this.currentScore;
   }
 }
 //Check for hold
 Player.prototype.holdScore=function(){
-  this.toalScore+=this.currentScore;
+  this.totalScore+=this.currentScore;
   this.currentScore=0;
   alert("Your turn is over!");
 }
@@ -51,9 +52,9 @@ $(document).ready(function(event){
    $('#status-die2').text(secondPlayer.currentScore)
  });
  $('button#dice-hold-1').click(function(){
-   $('#die1 .dice').text("Your final result is "+firstPlayer.currentScore)
+   $('#die1 .dice').text("Your final result is "+firstPlayer.totalScore)
  });
  $('button#dice-hold-2').click(function(){
-    $('#die1 .dice').text("Your final result is "+firstPlayer.currentScore)
+    $('#die1 .dice').text("Your final result is "+firstPlayer.totalScore)
   });
 });
