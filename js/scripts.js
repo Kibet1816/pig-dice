@@ -3,9 +3,9 @@ var secondPlayer="";
 
 
 function Player(rolled,currentScore,totalScore){
-  this.rolled=0;
-  this.currentScore=0;
-  this.totalScore=0;
+  this.rolled=rolled;
+  this.currentScore=currentScore;
+  this.totalScore=totalScore;
 }
 
 var rolledDice=function(){
