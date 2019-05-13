@@ -15,9 +15,6 @@ div.dice{
 body{
   background-image: url('../css/pig.png');
 }
-.fieldset{
-  background-color: white;
-}
 .header{
   font-family: monospace;
   font-style: oblique;
