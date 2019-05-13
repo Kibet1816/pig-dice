@@ -1,4 +1,4 @@
-# Triangle tracker
+# Pig Dice
 
 ## Authors
 - [Denis Kibet](https://github.com/Kibet1816)
