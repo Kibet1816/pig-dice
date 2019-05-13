@@ -38,14 +38,14 @@ Player.prototype.winner=function(){
 
 $(document).ready(function(event){
   $('button#dice-roll-1').click(function(){
-   firstPlayer=new Player
+   firstPlayer=new Player();
    firstPlayer.rolled=rolledDice();
    $('#die1 .dice').text(firstPlayer.rolled);
    firstPlayer.checkForOne();
    $('#status-die1').text(firstPlayer.currentScore)
  });
   $('button#dice-roll-2').click(function(){
-   secondPlayer=new Player
+   secondPlayer=new Player();
    secondPlayer.rolled=rolledDice();
    $('#die2 .dice').text(secondPlayer.rolled);
    secondPlayer.checkForOne();
