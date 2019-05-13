@@ -1,17 +1,17 @@
 var firstPlayer="";
 var secondPlayer="";
 
-  //Business logic
+
 function Player(rolled,currentScore,totalScore){
   this.rolled=0;
   this.currentScore=0;
   this.totalScore=0;
 }
-//Generate random number;
+
 var rolledDice=function(){
   return Math.floor(Math.random()*6)+1;
 }
-//Check for 1
+
 Player.prototype.checkForOne=function(){
   this.rolled=rolledDice();
   if (rolledDice()===1) {
@@ -22,20 +22,20 @@ Player.prototype.checkForOne=function(){
     this.totalScore=this.currentScore;
   }
 }
-//Check for hold
+
 Player.prototype.holdScore=function(){
   this.totalScore+=this.currentScore;
   this.currentScore=0;
   alert("Your turn is over!");
 }
-//Check for a winner
+
 Player.prototype.winner=function(){
   if (this.totalScore>=100) {
     alert("Winner!!!!!");
   }
 }
 
-//User interface logic
+
 $(document).ready(function(event){
   $('button#dice-roll-1').click(function(){
    firstPlayer=new Player
